@@ -1,12 +1,48 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title></title>
-  </head>
-  <body style="background-color:#4DB6AC;">
-    <h1>Ala Banking</h1>
+<html lang="en" dir="ltr">
+<head>
+  {% load static %}
+  <meta charset="utf-8">
+  <link href="{%static 'css/main.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <title></title>
+</head>
+<body>
+  <header class="masthead text-center text-white">
+
+    <nav style="background-color:#ED555A;" class="nav-extended">
+      <div class="nav-content">
+        <ul class="tabs tabs-transparent">
+          <li class="tab"><a class="navbar-brand" href="{% url 'index' %}" >Home</a></li>
+
+          <li class="tab"> <a href="{% url 'addAccount' %}" class="navbar-link btn-lg">What would you like to save for</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+{% block content %}
+  {% for account in account_info %}
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <h3 class="masthead-heading mb-0">I'm saving for {{account.item}}</h3>
+          <h4 class="masthead-subheading mb-0">I need {{account.balance}}</h4>
+          <h4 class="masthead-subheading mb-0">What I have saved: {{account.transactions}}</h4>
+          <div class="card-action">
+            <a href="updateAccount/{{account.id}}" class="waves-effect waves-light btn-large" id = '{{account.id}}'>Deposit</a>
+            <a href="deleteAccount/{{account.id}}" class="waves-effect waves-light btn-large" id = '{{account.id}}'>delete</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    {% endfor%}
+    {%endblock%}
+
   </body>
-</html>
+  </html>
