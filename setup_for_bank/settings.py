@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'bov4d%e3_mg&6$)am%m#i)4_38)jt7b@p(et@uq)jadhwmpc8k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['alabankingapp.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
