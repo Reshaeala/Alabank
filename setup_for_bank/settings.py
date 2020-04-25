@@ -26,7 +26,7 @@ SECRET_KEY = 'bov4d%e3_mg&6$)am%m#i)4_38)jt7b@p(et@uq)jadhwmpc8k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['alabankingapp.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
