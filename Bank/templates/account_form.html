@@ -3,9 +3,9 @@
 <head>
   {% load static %}
   <meta charset="utf-8">
-  <link href="{%static 'css/main.css' %}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Lobster&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{%static 'css/main.css' %}" rel="stylesheet">
   <title></title>
 </head>
 <body>
@@ -15,7 +15,7 @@
       <h1 class="adding">Upload Account</h1>
     </header>
     {% block content%}
-    
+
     <form class="form-style-4" method="POST" enctype="multipart/form-data">{% csrf_token %}
       <div>
 

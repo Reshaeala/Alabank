@@ -15,17 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
 from django.conf.urls.static import static
 from Bank.views import index, addAccount, updateAccount, deleteAccount
 from setup_for_bank.settings import DEBUG, STATIC_URL, STATIC_ROOT, MEDIA_URL, MEDIA_ROOT
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('bank/', index),
-    path('addAccount/', addAccount),
+    path('', index, name='index'),
+    path('addAccount/', addAccount, name='addAccount'),
     path('updateAccount/<int:Bank_id>/', updateAccount),
     path('deleteAccount/<int:Bank_id>/', deleteAccount)
 ]
 
-if DEBUG:
+if settings.DEBUG:
     urlpatterns += static(STATIC_URL, document_root=STATIC_ROOT)
     urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
