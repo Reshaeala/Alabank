@@ -4,15 +4,15 @@
 <head>
   {% load static %}
   <meta charset="utf-8">
-  <link href="{%static 'css/main.css' %}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Lobster&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="{%static 'css/main.css' %}" rel="stylesheet">
 
   <title></title>
 </head>
 <body>
-  <header class="masthead text-center text-white">
 
+  <header class="masthead text-center text-white">
     <nav style="background-color:#ED555A;" class="nav-extended">
       <div class="nav-content">
         <ul class="tabs tabs-transparent">
@@ -23,6 +23,7 @@
       </div>
     </nav>
   </header>
+  <center>
 {% block content %}
   {% for account in account_info %}
   <div class="row">
@@ -43,6 +44,6 @@
 
     {% endfor%}
     {%endblock%}
-
+  </center>
   </body>
   </html>
