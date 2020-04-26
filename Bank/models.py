@@ -16,14 +16,15 @@ class Account(models.Model):
     item = models.CharField(max_length=200, default='')
     cost = models.DecimalField(decimal_places=2, max_digits=500)
     savings = models.DecimalField(decimal_places=2, max_digits=500)
-    #
-    # def __str__(self):
-    #     return self.item
-    #
-    # def __init__(self):
-    #     self.balance = 0
-    #     self.transactions = []
-    #     print("Hello!!! Welcome to the Deposit & Withdrawal Machine")
+
+    def __str__(self):
+        return self.item
+
+
+    def __init__(self):
+        self.balance = 0
+        self.transactions = []
+
 
     # def deposit(self):
     #     amount = float(input("Enter amount to be Deposited: "))
