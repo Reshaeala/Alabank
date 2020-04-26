@@ -17,12 +17,11 @@ class Account(models.Model):
     cost = models.DecimalField(decimal_places=2, max_digits=500)
     savings = models.DecimalField(decimal_places=2, max_digits=500)
     #
-    # def __str__(self):
-    #     return self.item
-    #
-    # def __init__(self):
-    #     self.balance = 0
-    #     self.transactions = []
+
+    # def __init__(self, cost,):
+    #     self.cost = 0
+    #     self.savings = []
+    #      self.item
     #     print("Hello!!! Welcome to the Deposit & Withdrawal Machine")
 
     # def deposit(self):
