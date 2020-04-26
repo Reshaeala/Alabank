@@ -6,7 +6,7 @@ from django.http import HttpResponse
 
 def index(request):
     account_info = Account.objects.all()
-    return render(request, 'index.html', {'account_info': account_info})
+    return render(request, "build/index.html", {'account_info': account_info})
 
 
 def addAccount(request):

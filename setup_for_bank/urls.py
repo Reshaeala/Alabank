@@ -25,6 +25,7 @@ urlpatterns = [
     path('addAccount/', addAccount, name='addAccount'),
     path('updateAccount/<int:Bank_id>/', updateAccount),
     path('deleteAccount/<int:Bank_id>/', deleteAccount)
+    re_path(r'^.*$', index) 
 ]
 
 if settings.DEBUG:
