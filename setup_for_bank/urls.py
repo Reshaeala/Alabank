@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path,re_path
+from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from Bank.views import index, addAccount, updateAccount, deleteAccount
@@ -25,7 +25,6 @@ urlpatterns = [
     path('addAccount/', addAccount, name='addAccount'),
     path('updateAccount/<int:Bank_id>/', updateAccount),
     path('deleteAccount/<int:Bank_id>/', deleteAccount),
-    re_path(r'^.*$', index)
 ]
 
 if settings.DEBUG:

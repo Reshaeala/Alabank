@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-import psycopg2
+
 import os
 import django_heroku
 import dj_database_url
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'setup_for_bank.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'build')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -84,9 +84,6 @@ DATABASES = {
     }
 }
 
-
-DATABASE_URL = os.environ['DATABASE_URL']
-conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)

@@ -15,6 +15,10 @@ nav{
   font-family: 'Bangers', cursive;
 }
 
+.items{
+  padding: 10px;
+  margin-left: 22%;
+}
 
 .adding{
   background-color: var(--form-fonts);
