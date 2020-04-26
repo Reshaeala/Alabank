@@ -3,7 +3,7 @@ from django import forms
 
 # Create your models here.
 
-# 
+#
 # class SignUp(forms.Form):
 #     first_name = forms.CharField(initial='First Name')
 #     last_name = forms.CharField()
@@ -13,9 +13,9 @@ from django import forms
 #
 
 class Account(models.Model):
-    item = models.CharField(max_length=200, default='Saving for...')
-    balance = models.DecimalField(decimal_places=2, max_digits=500)
-    transactions = models.DecimalField(decimal_places=2, max_digits=500)
+    item = models.CharField(max_length=200, default='')
+    cost = models.DecimalField(decimal_places=2, max_digits=500)
+    savings = models.DecimalField(decimal_places=2, max_digits=500)
     #
     # def __str__(self):
     #     return self.item

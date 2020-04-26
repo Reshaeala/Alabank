@@ -1,14 +1,10 @@
-
-*{
-  border: 1px solid red
-}
-
 :root{
   --main-color: #ED555A;
   --form-color: #fafafa;
   --body-fonts: "Bangers", sans-serif;
   --form-fonts: "Lobster", sans-serif;
 }
+
 body{
   background-image: url("https://cdn.pixabay.com/photo/2019/03/20/12/42/money-4068357_1280.png");
   font-family: var(--body-fonts)
@@ -39,7 +35,6 @@ form{
   text-transform: uppercase;
   margin: 5px;
 }
-
 .account_form{
   border: 2px solid black;
  margin: auto;
@@ -50,8 +45,6 @@ form{
   border: 3px solid green;
   padding: 10px;
 }
-
-
 .form-style-4{
 	width: 450px;
 	font-size: 16px;
@@ -123,4 +116,3 @@ form{
 .form-style-4 input[type=button]:hover{
 background: #394D61;
 }
-</style>
