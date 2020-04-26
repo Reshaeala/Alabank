@@ -15,7 +15,7 @@ from django import forms
 class Account(models.Model):
     item = models.CharField(max_length=200, default='')
     cost = models.DecimalField(decimal_places=2, max_digits=500)
-    saving = models.DecimalField(decimal_places=2, max_digits=500)
+    savings = models.DecimalField(decimal_places=2, max_digits=500)
     #
 
     # def __init__(self, cost,):
