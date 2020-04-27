@@ -12,12 +12,20 @@ from django import forms
 #     re_password = forms.CharField(help_text='renter your password', widget=forms.PasswordInput)
 #
 
+
 class Account(models.Model):
     item = models.CharField(max_length=200, default='')
     cost = models.DecimalField(decimal_places=2, max_digits=500)
     savings = models.DecimalField(decimal_places=2, max_digits=500)
 
 
+class Customer(models.Model):
+    name = models.CharField(max_length=200, null=True)
+    email = models.EmailField(max_length=200, null=True)
+    date_created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
     # def __init__(self, cost,):
     #     self.cost = 0
     #     self.savings = []

@@ -9,7 +9,8 @@ body{
   background-image: url("https://cdn.pixabay.com/photo/2019/03/20/12/42/money-4068357_1280.png");
   font-family: var(--body-fonts)
 }
-nav{
+.nav-extended{
+  background-color:var(--main-color);
   text-align: center;
   align-items: center;
   font-family: 'Bangers', cursive;
@@ -17,7 +18,6 @@ nav{
 
 .items{
   padding: 10px;
-  margin-left: 22%;
 }
 
 .adding{
@@ -26,6 +26,10 @@ nav{
   text-align: center;
   padding: 20px;
   margin-top: auto;
+}
+
+.words{
+font-size: 25px;
 }
 
 form{

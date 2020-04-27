@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="{%static 'css/main.css' %}" rel="stylesheet">
+  <style media="screen">
+    body{
+      background-image: url('https://image.freepik.com/darmowe-wektory/swinka-skarbonka_24911-1637.jpg');
+       background-repeat: no-repeat;
+       background-size: cover;
+       margin-top: -3%;
+    }
+    .home{
+      background-color: white;
+
+    }
+  </style>
+  </head>
+  <body>
+
+
+<div class="home">
+
+<header class="masthead text-center text-white">
+
+  <nav class="nav-extended">
+
+    <div class="nav-wrapper">
+    <div class="nav-content">
+        <h1>Ala Savings</h1>
+      <span class="words"><a class="navbar-link btn-large red lighten-2" href="{% url 'register' %}">Sign Up</a></span>
+
+    <span class="words"><a class="navbar-link btn-large red lighten-2" href="{% url 'login' %}" class="ml-2">Login</a></span>
+  </div>
+  </div>
+  </nav>
+    </header>
+    </div>
+
+    
+  </body>
+</html>
+
+</div>
